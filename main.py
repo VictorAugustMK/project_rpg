@@ -12,6 +12,7 @@ class Token:
         try:
             insert_player = input('Nome do Jogador: ')
             insert_char = input('Nome do Personagem: ')
+            insert_race = input('Raça: ')
 
             ok = False
             trend = ''
@@ -35,7 +36,7 @@ class Token:
             num = False
             lvl = 0
             while True:
-                select_lvl = (input('Nivel desejado:'))
+                select_lvl = (input('Nivel desejado: '))
                 if select_lvl.isnumeric():
                     lvl = int(select_lvl)
                     num = True
