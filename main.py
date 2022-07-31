@@ -1,7 +1,7 @@
 import sys
 import pandas as pd
 
-from lista import pericias as ps
+from expertise import pericias as exp
 from loguru import logger
 
 
@@ -27,10 +27,10 @@ class ficha:
         expert = False
         skill = ''
         while True:
-            expertise = pd.DataFrame(ps, copy=False)
+            expertise = pd.DataFrame(exp, copy=False)
             select_expert = (input(f'Seleciona uma periacia: {expertise}'))
 
-            if select_expert in ps:
+            if select_expert in exp:
                 skill = select_expert
                 expert = True
             else:
