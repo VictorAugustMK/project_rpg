@@ -18,3 +18,14 @@ pericias = ['Acrobacia(Dex)',
             'Obter informação(Car)',
             'Percepção(Sab)',
             'Religião(Int)']
+
+tendencias = [
+    'Leal e bom',
+    'Neutro e bom',
+    'Caótico e bom',
+    'Leal e neutro',
+    'Neutro',
+    'Caótico neutro',
+    'Leal e mau',
+    'Neutro e mau',
+    'Caótico e mau']
