@@ -8,6 +8,7 @@ from loguru import logger
 class ficha:
 
     def selects_lvl(self):
+
         ok = False
         lvl = 0
         while True:
@@ -24,19 +25,19 @@ class ficha:
     def select_expertise(self):
 
         expert = False
-        lvl = ''
+        skill = ''
         while True:
             expertise = pd.DataFrame(ps, copy=False)
             select_expert = (input(f'Seleciona uma periacia: {expertise}'))
 
             if select_expert in ps:
-                lvl = select_expert
+                skill = select_expert
                 expert = True
             else:
                 print('\033[0;31mERRO! Digite alguma pericia acima.\033[m')
             if expert:
                 break
-        return lvl
+        return skill
 
 if __name__ == "__main__":
     query = ficha()
