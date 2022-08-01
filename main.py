@@ -7,6 +7,11 @@ from loguru import logger
 
 class Token:
 
+    def __init__(self):
+
+        self.state = 0
+
+
     def user_and_race(self):
 
         try:
@@ -27,8 +32,12 @@ class Token:
                 if ok:
                     break
             return trend
+
+            self.state = 1
+
         except Exception:
             logger.exception('Error!')
+            
     def selects_lvl(self):
 
         try:
@@ -45,6 +54,8 @@ class Token:
                 if num:
                     break
             return lvl
+
+            self.state = 2
 
         except Exception:
             logger.exception('Error - Insert a level!')
@@ -68,6 +79,8 @@ class Token:
                     break
             return skill
 
+            self.state = 4
+
         except Exception:
             logger.exception('Error - Insert a expertise!')
 
@@ -76,6 +89,8 @@ if __name__ == "__main__":
 
     token = Token()
 
-    token.user_and_race()
-    token.selects_lvl()
-    token.select_expertise()
+    switch = {
+        1: token.user_and_race(),
+        2: token.selects_lvl(),
+        3: token.select_expertise()
+    }
