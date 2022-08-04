@@ -41,7 +41,6 @@ class Token:
     def selects_lvl(self):
 
         try:
-
             num = False
             lvl = 0
             while True:
@@ -84,6 +83,14 @@ class Token:
         except Exception:
             logger.exception('Error - Insert a expertise!')
 
+    def stats(self):
+
+        stren = ''
+        dex = ''
+        intel = ''
+        cons = ''
+        car = ''
+        sab = ''
 
 if __name__ == "__main__":
 
